@@ -4,12 +4,15 @@ import "./index.css";
 import { ThemeProvider } from "styled-components";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import { defaultTheme } from "./Theme";
+import { defaultTheme } from "./theme";
+import { StoreProvider } from "./store";
 
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={defaultTheme}>
-      <App />
+      <StoreProvider>
+        <App />
+      </StoreProvider>
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById("root")

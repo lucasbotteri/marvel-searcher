@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import CardList from "./Components/CardList";
-import TopBar from "./Components/TopBar";
+import CardList from "./component/CardList";
+import TopBar from "./component/TopBar";
 
 const AppWrapper = styled.div`
   background-color: ${(props) => props.theme.appBackgroundColor};
