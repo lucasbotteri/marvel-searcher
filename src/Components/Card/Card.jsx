@@ -1,10 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Star from "../Star";
 
-const Wrapper = styled.section`
+const CardWrapper = styled.section`
   height: 380px;
   position: relative;
   width: 256px;
@@ -26,20 +25,18 @@ const Name = styled.h2`
   position: absolute;
 `;
 
-const StarIcon = styled(FontAwesomeIcon)`
-  color: ${(props) => props.theme.primaryColor};
-  cursor: pointer;
+const TopRightStar = styled(Star)`
   position: absolute;
   right: 16px;
   top: 8px;
 `;
-const Card = ({ name, imageSource, onClick }) => {
+const Card = ({ name, imageSource, onClick, isFaved }) => {
   return (
-    <Wrapper onClick={onClick} alt={name}>
+    <CardWrapper onClick={onClick} alt={name}>
       <ImageOverlay src={imageSource} />
-      <StarIcon icon={faStar} />
+      <TopRightStar isSolid={isFaved} />
       <Name> {name} </Name>
-    </Wrapper>
+    </CardWrapper>
   );
 };
 
@@ -47,6 +44,11 @@ Card.propTypes = {
   name: PropTypes.string.isRequired,
   imageSource: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
+  isFaved: PropTypes.bool,
+};
+
+Card.defaultProps = {
+  isFaved: false,
 };
 
 export default Card;
