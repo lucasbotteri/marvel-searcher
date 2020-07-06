@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import PropTypes from "prop-types";
 import { faSearch as SearchSvg } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
@@ -22,18 +23,34 @@ const SearchForm = styled.form`
   width: 80%;
 `;
 
-const SearchBox = () => {
+const SearchBox = ({ onSearch }) => {
+  const [searchText, setSearchText] = useState("");
+  const onChange = ({ target }) => {
+    setSearchText(target.value);
+  };
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    onSearch(searchText);
+  };
+
   return (
-    <SearchForm role="search">
+    <SearchForm role="search" onSubmit={onSubmit}>
       <SearchIcon icon={SearchSvg} alt="search-icon" />
       <InputBox
         id="search-input"
         type="text"
+        value={searchText}
+        onChange={onChange}
         placeholder="Search"
         aria-label="Search a character or comic"
       />
     </SearchForm>
   );
+};
+
+SearchBox.propTypes = {
+  onSearch: PropTypes.func.isRequired,
 };
 
 export default SearchBox;

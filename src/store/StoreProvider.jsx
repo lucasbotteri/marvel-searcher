@@ -15,7 +15,8 @@ const StoreProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INITAL_STATE);
   const value = {
     ...state,
-    fetchCharacters: (data) => actions.fetchCharacters(dispatch, data),
+    searchCharacter: (characterName) =>
+      actions.searchCharacter(dispatch, characterName),
   };
   return (
     <StoreContext.Provider value={value}>{children}</StoreContext.Provider>

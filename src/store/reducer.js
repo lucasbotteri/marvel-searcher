@@ -1,14 +1,17 @@
-import { LOADING_CHARACTERS, FETCH_CHARACTERS_SUCCESSFUL } from "./constants";
+import {
+  LOADING_CHARACTERS_SEARCH,
+  CHARACTERS_SEARCH_SUCCESSFUL,
+} from "./constants";
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case LOADING_CHARACTERS:
-      return { ...state, characters: [], loadingCharacters: true };
-    case FETCH_CHARACTERS_SUCCESSFUL:
+    case LOADING_CHARACTERS_SEARCH:
+      return { ...state, characters: [], isLoadingCharactersSearch: true };
+    case CHARACTERS_SEARCH_SUCCESSFUL:
       return {
         ...state,
         characters: action.payload,
-        fetchedCharactersSuccessful: true,
+        isCharacterSearchSuccessful: true,
       };
     default:
       throw new Error("Invalid Action");

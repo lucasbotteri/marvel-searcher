@@ -4,11 +4,11 @@ import styled from "styled-components";
 import Card from "../Card";
 
 const CharacterList = styled.ul`
-  display: grid;
   box-sizing: border-box;
+  display: grid;
+  grid-gap: 33px;
   grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
   justify-items: center;
-  grid-gap: 33px;
   padding: 40px 40px;
   width: 100%;
 `;
@@ -22,7 +22,12 @@ const CardList = ({ characters }) => {
     <CharacterList>
       {characters.map((c) => (
         <ListItem>
-          <Card name={c.name} imageSource={c.imageSource} onClick={() => {}} />
+          <Card
+            key={c.id}
+            name={c.name}
+            imageSource={c.thumbnail}
+            onClick={() => {}}
+          />
         </ListItem>
       ))}
     </CharacterList>
