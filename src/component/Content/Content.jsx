@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import styled from "styled-components";
 import CardList from "../CardList";
 import { StoreContext } from "../../store";
@@ -11,7 +11,11 @@ const ContentWrapper = styled.main`
 `;
 
 const Content = () => {
-  const { characters } = useContext(StoreContext);
+  const { characters, searchRandomCharacter } = useContext(StoreContext);
+
+  useEffect(() => {
+    searchRandomCharacter();
+  }, [searchRandomCharacter]);
 
   return (
     <ContentWrapper>

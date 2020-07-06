@@ -1,12 +1,10 @@
-import React, { useReducer } from "react";
+import React, { useReducer, useCallback } from "react";
 import PropTypes from "prop-types";
 import reducer from "./reducer";
 import * as actions from "./actions";
 
 const INITAL_STATE = {
   characters: [],
-  loadingCharacters: false,
-  fetchedCharactersSuccessful: true,
 };
 
 export const StoreContext = React.createContext();
@@ -15,8 +13,14 @@ const StoreProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INITAL_STATE);
   const value = {
     ...state,
-    searchCharacter: (characterName) =>
-      actions.searchCharacter(dispatch, characterName),
+    searchCharacter: useCallback(
+      (characterName) => actions.searchCharacter(dispatch, characterName),
+      []
+    ),
+    searchRandomCharacter: useCallback(
+      () => actions.searchRandomCharacter(dispatch),
+      []
+    ),
   };
   return (
     <StoreContext.Provider value={value}>{children}</StoreContext.Provider>

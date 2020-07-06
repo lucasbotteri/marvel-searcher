@@ -1,17 +1,14 @@
-import {
-  LOADING_CHARACTERS_SEARCH,
-  CHARACTERS_SEARCH_SUCCESSFUL,
-} from "./constants";
+import { LOADING_CHARACTERS_LIST, SET_CHARACTERS_LIST } from "./constants";
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case LOADING_CHARACTERS_SEARCH:
-      return { ...state, characters: [], isLoadingCharactersSearch: true };
-    case CHARACTERS_SEARCH_SUCCESSFUL:
+    case LOADING_CHARACTERS_LIST:
+      return { ...state, characters: [], isCharacterListLoading: true };
+    case SET_CHARACTERS_LIST:
       return {
         ...state,
         characters: action.payload,
-        isCharacterSearchSuccessful: true,
+        isCharacterListLoading: false,
       };
     default:
       throw new Error("Invalid Action");
