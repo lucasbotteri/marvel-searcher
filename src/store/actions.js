@@ -1,16 +1,19 @@
-import { LOADING_CHARACTERS, FETCH_CHARACTERS_SUCCESSFUL } from "./constants";
-import axiosClient from "../axiosClient";
+import {
+  LOADING_CHARACTERS_SEARCH,
+  CHARACTERS_SEARCH_SUCCESSFUL,
+} from "./constants";
+import { getCharacterByName } from "../service";
 
 export const loadingCharacters = () => ({
-  type: LOADING_CHARACTERS,
+  type: LOADING_CHARACTERS_SEARCH,
 });
 export const fetchCharacterSuccessful = (characters) => ({
-  type: FETCH_CHARACTERS_SUCCESSFUL,
-  data: characters,
+  type: CHARACTERS_SEARCH_SUCCESSFUL,
+  payload: characters,
 });
 
-export const fetchCharacters = async (dispatch, { charactersQuery }) => {
+export const searchCharacter = async (dispatch, characterName) => {
   dispatch(loadingCharacters());
-  const data = await axiosClient.get("charactersEndpoint", { charactersQuery });
-  dispatch(fetchCharacterSuccessful(data));
+  const characters = await getCharacterByName(characterName);
+  dispatch(fetchCharacterSuccessful(characters));
 };

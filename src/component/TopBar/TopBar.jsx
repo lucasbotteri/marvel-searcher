@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import Star from "../Star";
 import SearchBox from "../SearchBox";
 import Logo from "../../logo.svg";
+import { StoreContext } from "../../store";
 
 const FixedTopBarWrapper = styled.nav`
   align-items: center;
@@ -32,11 +33,16 @@ const MarvelLogo = styled.img`
 `;
 
 const TopBar = () => {
+  const { searchCharacter } = useContext(StoreContext);
+  const onSearch = (searchText) => {
+    searchCharacter(searchText);
+  };
+
   return (
     <FixedTopBarWrapper>
       <MarvelLogo src={Logo} alt="marvel logo" />
       <VerticalDivider />
-      <SearchBox />
+      <SearchBox onSearch={onSearch} />
       <TopBarFav isSolid={false} />
       <VerticalDivider />
     </FixedTopBarWrapper>
