@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
 import { ThemeProvider } from "styled-components";
+import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { defaultTheme } from "./theme";
@@ -11,7 +11,9 @@ ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={defaultTheme}>
       <StoreProvider>
-        <App />
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
       </StoreProvider>
     </ThemeProvider>
   </React.StrictMode>,
