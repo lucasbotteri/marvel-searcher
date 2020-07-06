@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const MARVEL_BASE_URL = "http://gateway.marvel.com/v1/public";
+const MARVEL_BASE_URL = "https://gateway.marvel.com/v1/public";
 const MARVEL_PUBLIC_KEY = "a5de01d258e63fb728a0977b5d6bfc8c";
 
 const axiosConfiguratedInstance = () => {
