@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import styled from "styled-components";
-import CardList from "../CardList";
+import CharacterList from "../CharacterList";
+import CharacterModal from "../CharacterModal";
 import { StoreContext } from "../../store";
 import { useQuery } from "../../hook";
 
@@ -12,9 +13,7 @@ const ContentWrapper = styled.main`
 `;
 
 const Content = () => {
-  const { characters, searchRandomCharacter, searchCharacter } = useContext(
-    StoreContext
-  );
+  const { searchRandomCharacter, searchCharacter } = useContext(StoreContext);
   const { character: queryParamCharacter } = useQuery();
 
   useEffect(() => {
@@ -27,7 +26,8 @@ const Content = () => {
 
   return (
     <ContentWrapper>
-      <CardList characters={characters} />
+      <CharacterList />
+      <CharacterModal />
     </ContentWrapper>
   );
 };
