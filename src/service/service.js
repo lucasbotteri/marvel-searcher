@@ -35,3 +35,18 @@ export const getRandomCharacter = async () => {
 
   return parseCharactersResponse(data.data);
 };
+
+export const getCharacterComics = async (characterId) => {
+  const { data } = await axiosClient.get(`/characters/${characterId}/comics`, {
+    params: {
+      orderBy: "onsaleDate",
+    },
+  });
+  const results = data.data.results || [];
+  return results.map((c) => ({
+    id: c.id,
+    title: c.title,
+    description: c.description,
+    thumbnail: c.thumbnail && `${c.thumbnail.path}/standard_medium.jpg`,
+  }));
+};

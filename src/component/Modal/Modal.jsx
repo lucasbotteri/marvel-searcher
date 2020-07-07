@@ -25,7 +25,6 @@ const ModalWrapper = styled.aside`
   height: 70%;
   margin: 10% auto;
   padding: 10px;
-  overflow: auto;
   width: 450px;
 
   @media (max-width: 490px) {
@@ -39,6 +38,7 @@ const ModalWrapper = styled.aside`
 const ModalContent = styled.div`
   align-self: center;
   padding: 10px;
+  overflow: auto;
 `;
 
 const CloseIcon = styled(FontAwesomeIcon)`

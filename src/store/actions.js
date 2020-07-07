@@ -3,8 +3,13 @@ import {
   SET_CHARACTERS_LIST,
   SET_CHARACTER_SELECTED,
   HIDE_MODAL,
+  SET_COMICS,
 } from "./constants";
-import { getCharacterByName, getRandomCharacter } from "../service";
+import {
+  getCharacterByName,
+  getRandomCharacter,
+  getCharacterComics,
+} from "../service";
 
 export const loadingCharacters = () => ({
   type: LOADING_CHARACTERS_LIST,
@@ -24,6 +29,11 @@ export const hideModal = () => ({
   type: HIDE_MODAL,
 });
 
+export const setComics = (comics) => ({
+  type: SET_COMICS,
+  payload: comics,
+});
+
 export const searchCharacter = async (dispatch, characterName) => {
   dispatch(loadingCharacters());
   const characters = await getCharacterByName(characterName);
@@ -34,4 +44,10 @@ export const searchRandomCharacter = async (dispatch) => {
   dispatch(loadingCharacters());
   const characters = await getRandomCharacter();
   dispatch(setCharacters(characters));
+};
+
+export const selectCharacter = async (dispatch, characterId, characterName) => {
+  dispatch(setCharacterSelected(characterId, characterName));
+  const comics = await getCharacterComics(characterId);
+  dispatch(setComics(comics));
 };
