@@ -57,15 +57,11 @@ const ModalTitle = styled.h3`
   font-weight: bold;
 `;
 
-const Modal = ({ children, title, isShowing, handleClose }) => {
+const Modal = ({ children, title, isShowing, onClose }) => {
   return isShowing ? (
     <ModalBackground>
       <ModalWrapper role="dialog" aria-labelledby="modal-title">
-        <CloseIcon
-          icon={CloseSvg}
-          onClick={handleClose}
-          aria-label="close modal"
-        />
+        <CloseIcon icon={CloseSvg} onClick={onClose} aria-label="close modal" />
         <ModalTitle id="modal-title"> {title}</ModalTitle>
         <ModalContent>{children}</ModalContent>
       </ModalWrapper>
@@ -77,7 +73,7 @@ Modal.propTypes = {
   children: PropTypes.element.isRequired,
   title: PropTypes.string.isRequired,
   isShowing: PropTypes.bool.isRequired,
-  handleClose: PropTypes.func.isRequired,
+  onClose: PropTypes.func.isRequired,
 };
 
 export default Modal;

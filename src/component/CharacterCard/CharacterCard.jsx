@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import Star from "../Star";
 
-const CardWrapper = styled.section`
+const CharacterCardWrapper = styled.section`
+  cursor: pointer;
   height: 380px;
   position: relative;
   width: 256px;
@@ -30,25 +31,28 @@ const TopRightStar = styled(Star)`
   right: 16px;
   top: 8px;
 `;
-const Card = ({ name, imageSource, onClick, isFaved }) => {
+const CharacterCard = ({ character, onClick, isFaved }) => {
+  const { name, thumbnail } = character;
   return (
-    <CardWrapper onClick={onClick} alt={name}>
-      <ImageOverlay src={imageSource} />
+    <CharacterCardWrapper onClick={onClick} alt={name}>
+      <ImageOverlay src={thumbnail} />
       <TopRightStar isSolid={isFaved} />
       <Name> {name} </Name>
-    </CardWrapper>
+    </CharacterCardWrapper>
   );
 };
 
-Card.propTypes = {
-  name: PropTypes.string.isRequired,
-  imageSource: PropTypes.string.isRequired,
+CharacterCard.propTypes = {
+  character: PropTypes.shape({
+    name: PropTypes.string,
+    thumbnail: PropTypes.string,
+  }).isRequired,
   onClick: PropTypes.func.isRequired,
   isFaved: PropTypes.bool,
 };
 
-Card.defaultProps = {
+CharacterCard.defaultProps = {
   isFaved: false,
 };
 
-export default Card;
+export default CharacterCard;
