@@ -3,6 +3,7 @@ import {
   SET_CHARACTERS_LIST,
   SET_CHARACTER_SELECTED,
   HIDE_MODAL,
+  SET_COMICS,
 } from "./constants";
 
 const reducer = (state, action) => {
@@ -21,11 +22,18 @@ const reducer = (state, action) => {
         ...state,
         characterSelected: action.payload,
         isShowingModal: true,
+        isLoadingComics: true,
       };
     case HIDE_MODAL:
       return {
         ...state,
         isShowingModal: false,
+      };
+    case SET_COMICS:
+      return {
+        ...state,
+        comics: action.payload,
+        isLoadingComics: false,
       };
     default:
       throw new Error("Invalid Action");

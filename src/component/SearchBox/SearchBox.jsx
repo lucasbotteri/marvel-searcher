@@ -5,9 +5,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 
 const InputBox = styled.input`
+  -webkit-appearance: none;
   border: 0;
-  outline: 0;
   margin-left: 10px;
+  outline: 0;
   width: 100%;
 `;
 
@@ -42,6 +43,7 @@ const SearchBox = ({ onSearch }) => {
         type="text"
         value={searchText}
         onChange={onChange}
+        autocomplete="off"
         placeholder="Search"
         aria-label="Search a character or comic"
       />

@@ -6,6 +6,7 @@ import * as actions from "./actions";
 const INITAL_STATE = {
   characters: [],
   characterSelected: {},
+  comics: [],
 };
 
 export const StoreContext = React.createContext();
@@ -22,8 +23,8 @@ const StoreProvider = ({ children }) => {
       () => actions.searchRandomCharacter(dispatch),
       []
     ),
-    setCharacterSelected: useCallback(
-      (id, name) => dispatch(actions.setCharacterSelected(id, name)),
+    selectCharacter: useCallback(
+      (id, name) => actions.selectCharacter(dispatch, id, name),
       []
     ),
     hideModal: useCallback(() => dispatch(actions.hideModal()), []),

@@ -18,7 +18,7 @@ const CharacterListItem = styled.li`
 `;
 
 const CharacterList = () => {
-  const { characters, setCharacterSelected } = useContext(StoreContext);
+  const { characters, selectCharacter } = useContext(StoreContext);
 
   return (
     <CharacterListWrapper>
@@ -28,7 +28,7 @@ const CharacterList = () => {
             key={c.id}
             character={c}
             onClick={() => {
-              setCharacterSelected(c.id, c.name);
+              selectCharacter(c.id, c.name);
             }}
           />
         </CharacterListItem>
