@@ -23,8 +23,13 @@ const StoreProvider = ({ children }) => {
       () => actions.searchRandomCharacter(dispatch),
       []
     ),
+    searchCharacterComics: useCallback(
+      (id, comicFilter) =>
+        actions.searchCharacterComics(dispatch, id, comicFilter),
+      []
+    ),
     selectCharacter: useCallback(
-      (id, name) => actions.selectCharacter(dispatch, id, name),
+      (id, name) => dispatch(actions.setCharacterSelected(id, name)),
       []
     ),
     hideModal: useCallback(() => dispatch(actions.hideModal()), []),

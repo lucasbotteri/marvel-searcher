@@ -36,10 +36,11 @@ export const getRandomCharacter = async () => {
   return parseCharactersResponse(data.data);
 };
 
-export const getCharacterComics = async (characterId) => {
+export const getCharacterComics = async (characterId, comicFilter) => {
   const { data } = await axiosClient.get(`/characters/${characterId}/comics`, {
     params: {
       orderBy: "onsaleDate",
+      ...(comicFilter && { titleStartsWith: comicFilter }),
     },
   });
   const results = data.data.results || [];

@@ -4,6 +4,7 @@ import {
   SET_CHARACTER_SELECTED,
   HIDE_MODAL,
   SET_COMICS,
+  SET_LOADING_COMICS,
 } from "./constants";
 import {
   getCharacterByName,
@@ -34,6 +35,10 @@ export const setComics = (comics) => ({
   payload: comics,
 });
 
+export const setLoadingComics = () => ({
+  type: SET_LOADING_COMICS,
+});
+
 export const searchCharacter = async (dispatch, characterName) => {
   dispatch(loadingCharacters());
   const characters = await getCharacterByName(characterName);
@@ -46,8 +51,12 @@ export const searchRandomCharacter = async (dispatch) => {
   dispatch(setCharacters(characters));
 };
 
-export const selectCharacter = async (dispatch, characterId, characterName) => {
-  dispatch(setCharacterSelected(characterId, characterName));
-  const comics = await getCharacterComics(characterId);
+export const searchCharacterComics = async (
+  dispatch,
+  characterId,
+  comicFilter
+) => {
+  dispatch(setLoadingComics());
+  const comics = await getCharacterComics(characterId, comicFilter);
   dispatch(setComics(comics));
 };
