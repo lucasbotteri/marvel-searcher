@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import Card from "../Card";
 
-const CharacterList = styled.ul`
+const CardListWrapper = styled.ul`
   box-sizing: border-box;
   display: grid;
   grid-gap: 33px;
@@ -13,24 +13,24 @@ const CharacterList = styled.ul`
   width: 100%;
 `;
 
-const ListItem = styled.li`
+const CardListItem = styled.li`
   list-style: none;
 `;
 
 const CardList = ({ characters }) => {
   return (
-    <CharacterList>
+    <CardListWrapper>
       {characters.map((c) => (
-        <ListItem>
+        <CardListItem>
           <Card
             key={c.id}
             name={c.name}
             imageSource={c.thumbnail}
             onClick={() => {}}
           />
-        </ListItem>
+        </CardListItem>
       ))}
-    </CharacterList>
+    </CardListWrapper>
   );
 };
 
