@@ -8,7 +8,6 @@ const ModalBackground = styled.div`
   background-color: ${(props) => props.theme.opaqueColor};
   height: 100%;
   left: 0;
-  overflow: auto;
   position: fixed;
   top: 0;
   width: 100%;
@@ -23,8 +22,10 @@ const ModalWrapper = styled.aside`
   display: flex;
   flex-direction: column;
   font-size: 19px;
+  height: 70%;
   margin: 10% auto;
   padding: 10px;
+  overflow: auto;
   width: 450px;
 
   @media (max-width: 490px) {
