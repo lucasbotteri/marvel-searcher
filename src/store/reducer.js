@@ -4,6 +4,7 @@ import {
   SET_CHARACTER_SELECTED,
   HIDE_MODAL,
   SET_COMICS,
+  SET_LOADING_COMICS,
 } from "./constants";
 
 const reducer = (state, action) => {
@@ -22,6 +23,10 @@ const reducer = (state, action) => {
         ...state,
         characterSelected: action.payload,
         isShowingModal: true,
+      };
+    case SET_LOADING_COMICS:
+      return {
+        ...state,
         isLoadingComics: true,
       };
     case HIDE_MODAL:

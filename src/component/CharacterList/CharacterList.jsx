@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
-import { StoreContext } from "../../store";
 import styled from "styled-components";
+import { useQuery } from "../../hook";
+import { StoreContext } from "../../store";
 import CharacterCard from "../CharacterCard";
 
 const CharacterListWrapper = styled.ul`
@@ -18,7 +19,10 @@ const CharacterListItem = styled.li`
 `;
 
 const CharacterList = () => {
-  const { characters, selectCharacter } = useContext(StoreContext);
+  const { characters, selectCharacter, searchCharacterComics } = useContext(
+    StoreContext
+  );
+  const { comic: comicFilter } = useQuery();
 
   return (
     <CharacterListWrapper>
@@ -29,6 +33,7 @@ const CharacterList = () => {
             character={c}
             onClick={() => {
               selectCharacter(c.id, c.name);
+              searchCharacterComics(c.id, comicFilter);
             }}
           />
         </CharacterListItem>
