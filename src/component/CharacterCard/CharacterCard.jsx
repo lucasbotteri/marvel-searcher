@@ -21,7 +21,7 @@ const ImageOverlay = styled.img`
 const Name = styled.h2`
   bottom: 8px;
   color: ${(props) => props.theme.primaryColor};
-  font-size: 19px;
+  font-size: ${(props) => props.theme.h2Size};
   left: 16px;
   position: absolute;
 `;

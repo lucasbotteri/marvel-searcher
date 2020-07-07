@@ -8,4 +8,5 @@ export default {
   secondaryColor: "#A8A8A880",
   secondaryFontColor: "#515151",
   semiBold: "500",
+  h2Size: "19px",
 };
