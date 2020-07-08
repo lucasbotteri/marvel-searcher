@@ -25,12 +25,11 @@ const ModalWrapper = styled.aside`
   height: 70%;
   margin: 10% auto;
   padding: 10px;
-  width: 450px;
+  width: 400px;
 
-  @media (max-width: 490px) {
-    height: 90%;
-    margin-top: 10%;
-    margin: 0;
+  @media (max-width: 425px) {
+    height: 100%;
+    margin: 45px 0;
     width: 95%;
   }
 `;
