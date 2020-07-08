@@ -22,6 +22,14 @@ const SearchForm = styled.form`
   color: ${(props) => props.theme.secondaryColor};
   font-size: 16px;
   width: 80%;
+
+  @media (max-width: 768px) {
+    width: 70%;
+  }
+
+  @media (max-width: 425px) {
+    width: 60%;
+  }
 `;
 
 const SearchBox = ({ onSearch }) => {
