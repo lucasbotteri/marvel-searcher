@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 import { useQuery } from "../../hook";
 import { StoreContext } from "../../store";
 import CharacterCard from "../CharacterCard";
@@ -18,10 +19,8 @@ const CharacterListItem = styled.li`
   list-style: none;
 `;
 
-const CharacterList = () => {
-  const { characters, selectCharacter, searchCharacterComics } = useContext(
-    StoreContext
-  );
+const CharacterList = ({ characters }) => {
+  const { selectCharacter, searchCharacterComics } = useContext(StoreContext);
   const { comic: comicFilter } = useQuery();
 
   return (
@@ -40,6 +39,15 @@ const CharacterList = () => {
       ))}
     </CharacterListWrapper>
   );
+};
+
+CharacterList.propTypes = {
+  characters: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      thumbnail: PropTypes.string,
+    })
+  ).isRequired,
 };
 
 export default CharacterList;

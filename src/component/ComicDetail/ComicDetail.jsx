@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 
 const ComicDetailWrapper = styled.div`
   align-items: start;
+  column-gap: 20px;
   display: grid;
   grid-template-areas:
     "image title"
@@ -12,12 +13,20 @@ const ComicDetailWrapper = styled.div`
     "image .";
   grid-template-columns: 50% auto;
   grid-template-rows: repeat(4, auto);
+  justify-items: start;
   margin: auto;
   width: 66%;
+
+  @media (max-width: 425) {
+    width: 100%;
+  }
 `;
 
 const ComicImage = styled.img`
   grid-area: image;
+  justify-self: end;
+  max-width: 100%;
+  height: auto;
 `;
 
 const ComicTitle = styled.h2`

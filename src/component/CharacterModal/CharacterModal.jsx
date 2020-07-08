@@ -11,7 +11,7 @@ const CharacterModal = () => {
     hideModal,
     isLoadingComics,
   } = useContext(StoreContext);
-  return (
+  return isShowingModal ? (
     <Modal
       isShowing={isShowingModal}
       title={characterSelected.name}
@@ -19,7 +19,7 @@ const CharacterModal = () => {
     >
       {isLoadingComics ? "Loading comics..." : <ComicList comics={comics} />}
     </Modal>
-  );
+  ) : null;
 };
 
 export default CharacterModal;
