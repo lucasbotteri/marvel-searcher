@@ -1,12 +1,12 @@
 import React, { useContext, useEffect } from "react";
 import styled from "styled-components";
-import CharacterList from "../CharacterList";
-import CharacterModal from "../CharacterModal";
-import ComicDetail from "../ComicDetail";
-import { StoreContext } from "../../store";
-import { useQuery } from "../../hook";
+import CharacterList from "../../organism/CharacterList";
+import CharacterModal from "../../organism/CharacterModal";
+import ComicDetail from "../../molecule/ComicDetail";
+import { StoreContext } from "../../../store";
+import { useQuery } from "../../../hook";
 
-const ContentWrapper = styled.main`
+const HomeWrapper = styled.main`
   background-color: ${(props) => props.theme.appBackgroundColor};
   box-sizing: border-box;
   height: 100%;
@@ -18,7 +18,7 @@ const ContentWrapper = styled.main`
   }
 `;
 
-const Content = () => {
+const Home = () => {
   const {
     searchRandomCharacter,
     searchCharacter,
@@ -37,14 +37,14 @@ const Content = () => {
   }, [searchRandomCharacter, searchCharacter, queryParamCharacter]);
 
   return (
-    <ContentWrapper>
+    <HomeWrapper>
       {loadingContent && "...loading"}
       {noResults && "No Results Found"}
       {characters && <CharacterList characters={characters} />}
       {comic && <ComicDetail comic={comic} />}
       <CharacterModal />
-    </ContentWrapper>
+    </HomeWrapper>
   );
 };
 
-export default Content;
+export default Home;

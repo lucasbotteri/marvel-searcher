@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import { useQuery } from "../../hook";
-import { StoreContext } from "../../store";
-import CharacterCard from "../CharacterCard";
+import { useQuery } from "../../../hook";
+import { StoreContext } from "../../../store";
+import CharacterCard from "../../molecule/CharacterCard";
 
 const CharacterListWrapper = styled.ul`
   box-sizing: border-box;

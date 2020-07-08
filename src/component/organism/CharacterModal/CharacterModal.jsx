@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import Modal from "../Modal";
-import { StoreContext } from "../../store";
+import Modal from "../../molecule/Modal";
+import { StoreContext } from "../../../store";
 import ComicList from "../ComicList";
 
 const CharacterModal = () => {

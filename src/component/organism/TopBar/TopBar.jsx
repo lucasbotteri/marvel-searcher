@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
-import Star from "../Star";
-import SearchBox from "../SearchBox";
-import Logo from "../../logo.svg";
-import { StoreContext } from "../../store";
+import Star from "../../molecule/Star";
+import SearchBox from "../../molecule/SearchBox";
+import Logo from "../../../logo.svg";
+import { StoreContext } from "../../../store";
 
 const MARVEL_COMIC_URL_REGEX = /https:\/\/www\.marvel\.com\/comics\/issue\/[0-9]+\//;
 const MARVEL_COMIC_ID_REGEX = /\/[0-9]+\//;
