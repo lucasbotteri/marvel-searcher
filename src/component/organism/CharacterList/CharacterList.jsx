@@ -21,7 +21,13 @@ const CharacterListItem = styled.li`
 `;
 
 const CharacterList = ({ characters }) => {
-  const { selectCharacter, searchCharacterComics } = useContext(StoreContext);
+  const {
+    selectCharacter,
+    searchCharacterComics,
+    saveFav,
+    removeFav,
+    favs,
+  } = useContext(StoreContext);
   const { comic: comicFilter } = useQuery();
 
   return (
@@ -34,6 +40,9 @@ const CharacterList = ({ characters }) => {
               selectCharacter(c.id, c.name);
               searchCharacterComics(c.id, comicFilter);
             }}
+            isFaved={favs && favs.some((f) => f.id === c.id)}
+            onFaved={() => saveFav(c)}
+            onUnfaved={() => removeFav(c.id)}
           />
         </CharacterListItem>
       ))}

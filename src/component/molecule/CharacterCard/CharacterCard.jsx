@@ -31,12 +31,22 @@ const TopRightStar = styled(Star)`
   right: 16px;
   top: 8px;
 `;
-const CharacterCard = ({ character, onClick, isFaved }) => {
+const CharacterCard = ({ character, onClick, isFaved, onFaved, onUnfaved }) => {
   const { name, thumbnail } = character;
   return (
     <CharacterCardWrapper onClick={onClick} alt={name}>
       <ImageOverlay src={thumbnail} />
-      <TopRightStar isSolid={isFaved} />
+      <TopRightStar
+        isSolid={isFaved}
+        onClick={(e) => {
+          e.stopPropagation();
+          if (isFaved) {
+            onUnfaved();
+          } else {
+            onFaved();
+          }
+        }}
+      />
       <Name> {name} </Name>
     </CharacterCardWrapper>
   );
@@ -48,6 +58,8 @@ CharacterCard.propTypes = {
     thumbnail: PropTypes.string,
   }).isRequired,
   onClick: PropTypes.func.isRequired,
+  onFaved: PropTypes.func.isRequired,
+  onUnfaved: PropTypes.func.isRequired,
   isFaved: PropTypes.bool,
 };
 
