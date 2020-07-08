@@ -5,11 +5,14 @@ import {
   HIDE_MODAL,
   SET_COMICS,
   SET_LOADING_COMICS,
+  SET_COMIC,
+  SET_LOADING_COMIC,
 } from "./constants";
 import {
   getCharacterByName,
   getRandomCharacter,
   getCharacterComics,
+  getComic,
 } from "../service";
 
 export const loadingCharacters = () => ({
@@ -39,6 +42,15 @@ export const setLoadingComics = () => ({
   type: SET_LOADING_COMICS,
 });
 
+export const setComic = (comics) => ({
+  type: SET_COMIC,
+  payload: comics,
+});
+
+export const setLoadingComic = () => ({
+  type: SET_LOADING_COMIC,
+});
+
 export const searchCharacter = async (dispatch, characterName) => {
   dispatch(loadingCharacters());
   const characters = await getCharacterByName(characterName);
@@ -59,4 +71,10 @@ export const searchCharacterComics = async (
   dispatch(setLoadingComics());
   const comics = await getCharacterComics(characterId, comicFilter);
   dispatch(setComics(comics));
+};
+
+export const searchComic = async (dispatch, comicId) => {
+  dispatch(setLoadingComic());
+  const comic = await getComic(comicId);
+  dispatch(setComic(comic));
 };

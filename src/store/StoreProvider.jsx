@@ -4,9 +4,11 @@ import reducer from "./reducer";
 import * as actions from "./actions";
 
 const INITAL_STATE = {
-  characters: [],
+  characters: null,
   characterSelected: {},
   comics: [],
+  comic: null,
+  loadingContent: true,
 };
 
 export const StoreContext = React.createContext();
@@ -28,6 +30,7 @@ const StoreProvider = ({ children }) => {
         actions.searchCharacterComics(dispatch, id, comicFilter),
       []
     ),
+    searchComic: useCallback((id) => actions.searchComic(dispatch, id), []),
     selectCharacter: useCallback(
       (id, name) => dispatch(actions.setCharacterSelected(id, name)),
       []

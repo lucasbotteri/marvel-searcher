@@ -5,6 +5,9 @@ import SearchBox from "../SearchBox";
 import Logo from "../../logo.svg";
 import { StoreContext } from "../../store";
 
+const MARVEL_COMIC_URL_REGEX = /https:\/\/www\.marvel\.com\/comics\/issue\/[0-9]+\//;
+const MARVEL_COMIC_ID_REGEX = /\/[0-9]+\//;
+
 const FixedTopBarWrapper = styled.nav`
   align-items: center;
   background-color: ${(props) => props.theme.primaryColor};
@@ -33,9 +36,18 @@ const MarvelLogo = styled.img`
 `;
 
 const TopBar = () => {
-  const { searchCharacter } = useContext(StoreContext);
+  const { searchCharacter, searchComic } = useContext(StoreContext);
   const onSearch = (searchText) => {
-    searchCharacter(searchText);
+    if (searchText) {
+      const isAComicSearch = MARVEL_COMIC_URL_REGEX.test(searchText);
+      if (isAComicSearch) {
+        const comicId = searchText.match(MARVEL_COMIC_ID_REGEX)[0];
+        const parsedComicId = comicId.slice(1, comicId.length - 1);
+        searchComic(parsedComicId);
+      } else {
+        searchCharacter(searchText);
+      }
+    }
   };
 
   return (

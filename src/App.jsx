@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import Content from "./component/Content";
-import ComicDetail from "./component/ComicDetail";
 import TopBar from "./component/TopBar";
 
 const AppWrapper = styled.div`
@@ -13,7 +12,6 @@ function App() {
     <AppWrapper>
       <TopBar />
       <Content />
-      <ComicDetail />
     </AppWrapper>
   );
 }
