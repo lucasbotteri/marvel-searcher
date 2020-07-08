@@ -1,4 +1,4 @@
-import React, { useReducer, useCallback } from "react";
+import React, { useReducer, useCallback, useEffect } from "react";
 import PropTypes from "prop-types";
 import reducer from "./reducer";
 import * as actions from "./actions";
@@ -9,6 +9,10 @@ const INITAL_STATE = {
   comics: [],
   comic: null,
   loadingContent: true,
+  favs: JSON.parse(localStorage.getItem("favs")),
+  isShowingFavs: false,
+  isShowingModal: false,
+  showModal: false,
 };
 
 export const StoreContext = React.createContext();
@@ -35,8 +39,22 @@ const StoreProvider = ({ children }) => {
       (id, name) => dispatch(actions.setCharacterSelected(id, name)),
       []
     ),
+    saveFav: useCallback(
+      (character) => dispatch(actions.saveFav(character)),
+      []
+    ),
+    removeFav: useCallback((id) => dispatch(actions.removeFav(id)), []),
+    showFavs: useCallback(() => dispatch(actions.showFavs()), []),
+    hideFavs: useCallback(() => dispatch(actions.hideFavs()), []),
     hideModal: useCallback(() => dispatch(actions.hideModal()), []),
   };
+
+  useEffect(() => {
+    if (state.favs) {
+      localStorage.setItem("favs", JSON.stringify(state.favs));
+    }
+  }, [state.favs]);
+
   return (
     <StoreContext.Provider value={value}>{children}</StoreContext.Provider>
   );

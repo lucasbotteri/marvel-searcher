@@ -1,5 +1,5 @@
 import {
-  LOADING_CHARACTERS_LIST,
+  SET_LOADING_CHARACTERS_LIST,
   SET_CHARACTERS_LIST,
   SET_CHARACTER_SELECTED,
   HIDE_MODAL,
@@ -7,6 +7,10 @@ import {
   SET_LOADING_COMICS,
   SET_COMIC,
   SET_LOADING_COMIC,
+  SAVE_FAV,
+  SHOW_FAVS,
+  REMOVE_FAV,
+  HIDE_FAVS,
 } from "./constants";
 import {
   getCharacterByName,
@@ -15,8 +19,8 @@ import {
   getComic,
 } from "../service";
 
-export const loadingCharacters = () => ({
-  type: LOADING_CHARACTERS_LIST,
+export const setLoadingCharacters = () => ({
+  type: SET_LOADING_CHARACTERS_LIST,
 });
 
 export const setCharacters = (characters) => ({
@@ -51,14 +55,32 @@ export const setLoadingComic = () => ({
   type: SET_LOADING_COMIC,
 });
 
+export const saveFav = (character) => ({
+  type: SAVE_FAV,
+  payload: character,
+});
+
+export const showFavs = () => ({
+  type: SHOW_FAVS,
+});
+
+export const hideFavs = () => ({
+  type: HIDE_FAVS,
+});
+
+export const removeFav = (id) => ({
+  type: REMOVE_FAV,
+  payload: { id },
+});
+
 export const searchCharacter = async (dispatch, characterName) => {
-  dispatch(loadingCharacters());
+  dispatch(setLoadingCharacters());
   const characters = await getCharacterByName(characterName);
   dispatch(setCharacters(characters));
 };
 
 export const searchRandomCharacter = async (dispatch) => {
-  dispatch(loadingCharacters());
+  dispatch(setLoadingCharacters());
   const characters = await getRandomCharacter();
   dispatch(setCharacters(characters));
 };

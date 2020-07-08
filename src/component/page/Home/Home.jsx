@@ -25,9 +25,16 @@ const Home = () => {
     comic,
     characters,
     loadingContent,
+    isShowingFavs,
+    favs,
   } = useContext(StoreContext);
+
   const { character: queryParamCharacter } = useQuery();
-  const noResults = !loadingContent && !characters && !comic;
+
+  const charactersToShow = isShowingFavs ? favs : characters;
+
+  const noResults = !loadingContent && !charactersToShow && !comic;
+
   useEffect(() => {
     if (queryParamCharacter) {
       searchCharacter(queryParamCharacter);
@@ -40,7 +47,7 @@ const Home = () => {
     <HomeWrapper>
       {loadingContent && "...loading"}
       {noResults && "No Results Found"}
-      {characters && <CharacterList characters={characters} />}
+      {charactersToShow && <CharacterList characters={charactersToShow} />}
       {comic && <ComicDetail comic={comic} />}
       <CharacterModal />
     </HomeWrapper>

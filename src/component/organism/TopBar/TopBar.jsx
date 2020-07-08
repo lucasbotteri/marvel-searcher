@@ -36,7 +36,13 @@ const MarvelLogo = styled.img`
 `;
 
 const TopBar = () => {
-  const { searchCharacter, searchComic } = useContext(StoreContext);
+  const {
+    searchCharacter,
+    searchComic,
+    showFavs,
+    isShowingFavs,
+    hideFavs,
+  } = useContext(StoreContext);
   const onSearch = (searchText) => {
     if (searchText) {
       const isAComicSearch = MARVEL_COMIC_URL_REGEX.test(searchText);
@@ -55,7 +61,10 @@ const TopBar = () => {
       <MarvelLogo src={Logo} alt="marvel logo" />
       <VerticalDivider />
       <SearchBox onSearch={onSearch} />
-      <TopBarFav isSolid={false} />
+      <TopBarFav
+        isSolid={isShowingFavs}
+        onClick={isShowingFavs ? hideFavs : showFavs}
+      />
       <VerticalDivider />
     </FixedTopBarWrapper>
   );
