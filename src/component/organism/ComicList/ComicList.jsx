@@ -19,8 +19,8 @@ const ComicList = ({ comics }) => {
   return (
     <ComicListWrapper>
       {comics.map((c) => (
-        <NonStyledLi>
-          <ComicItem key={c.id} comic={c} />
+        <NonStyledLi key={c.id}>
+          <ComicItem comic={c} />
         </NonStyledLi>
       ))}
     </ComicListWrapper>
@@ -30,7 +30,7 @@ const ComicList = ({ comics }) => {
 ComicList.propTypes = {
   comics: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string,
+      id: PropTypes.number,
       title: PropTypes.string,
       description: PropTypes.string,
       thumbnail: PropTypes.string,

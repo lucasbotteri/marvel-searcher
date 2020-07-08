@@ -68,7 +68,7 @@ const ComicItem = ({ comic, onFaved }) => {
 
 ComicItem.propTypes = {
   comic: PropTypes.shape({
-    id: PropTypes.string,
+    id: PropTypes.number,
     title: PropTypes.string,
     description: PropTypes.string,
     thumbnail: PropTypes.string,

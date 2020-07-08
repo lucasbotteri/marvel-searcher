@@ -27,9 +27,8 @@ const CharacterList = ({ characters }) => {
   return (
     <CharacterListWrapper>
       {characters.map((c) => (
-        <CharacterListItem>
+        <CharacterListItem key={c.id}>
           <CharacterCard
-            key={c.id}
             character={c}
             onClick={() => {
               selectCharacter(c.id, c.name);
