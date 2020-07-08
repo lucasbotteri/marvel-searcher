@@ -11,7 +11,8 @@ const CharacterListWrapper = styled.ul`
   grid-gap: 33px;
   grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
   justify-items: center;
-  padding: 40px 40px;
+  padding: 20px;
+  margin: 0;
   width: 100%;
 `;
 

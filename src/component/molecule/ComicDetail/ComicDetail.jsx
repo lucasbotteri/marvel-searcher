@@ -17,8 +17,16 @@ const ComicDetailWrapper = styled.div`
   margin: auto;
   width: 66%;
 
-  @media (max-width: 425) {
-    width: 100%;
+  @media (max-width: 425px) {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+      "image "
+      "title"
+      "creators"
+      "description";
+    justify-items: center;
+    width: 90%;
   }
 `;
 
@@ -27,11 +35,19 @@ const ComicImage = styled.img`
   justify-self: end;
   max-width: 100%;
   height: auto;
+  @media (max-width: 425px) {
+    justify-self: center;
+  }
 `;
 
 const ComicTitle = styled.h2`
   font-size: ${(props) => props.theme.h2Size};
   grid-area: title;
+  text-align: start;
+
+  @media (max-width: 425px) {
+    text-align: center;
+  }
 `;
 
 const ComicCreator = styled.p`
@@ -42,11 +58,21 @@ const ComicCreator = styled.p`
 
 const ComicCreatorsWrapper = styled.div`
   grid-area: creators;
+  text-align: start;
+
+  @media (max-width: 425px) {
+    text-align: center;
+  }
 `;
 
 const ComicDescription = styled.p`
   font-size: 11px;
   grid-area: description;
+  text-align: start;
+
+  @media (max-width: 425px) {
+    text-align: center;
+  }
 `;
 
 const ComicDetail = ({ comic }) => {

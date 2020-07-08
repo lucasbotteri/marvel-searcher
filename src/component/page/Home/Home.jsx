@@ -10,7 +10,7 @@ const HomeWrapper = styled.main`
   background-color: ${(props) => props.theme.appBackgroundColor};
   box-sizing: border-box;
   height: 100%;
-  margin-top: 50px;
+  padding-top: 90px;
   text-align: center;
 
   @media (max-width: 425) {
