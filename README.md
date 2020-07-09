@@ -35,4 +35,4 @@ We recommend to use VS extension to help you coding because they will run before
 
 ### Enviroment variables
 
-Check example.env file to know what enviroment variables do you need.
+Check example.env file to know what enviroment variables do you need and check [create-react-app] to know which env file name do you need to create.
