@@ -1,3 +1,125 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CharacterModal Should match snapshot 1`] = `ReactWrapper {}`;
+exports[`CharacterModal Should match snapshot 1`] = `
+<CharacterModal>
+  <Modal
+    onClose={[Function]}
+    title="spiderman"
+  >
+    <styled.div>
+      <div
+        className="sc-AxjAm jLfDnH"
+      >
+        <styled.aside
+          aria-labelledby="modal-title"
+          role="dialog"
+        >
+          <aside
+            aria-labelledby="modal-title"
+            className="sc-AxirZ gEfLNE"
+            role="dialog"
+          >
+            <Styled(FontAwesomeIcon)
+              aria-label="close modal"
+              icon={
+                Object {
+                  "icon": Array [
+                    352,
+                    512,
+                    Array [],
+                    "f00d",
+                    "M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z",
+                  ],
+                  "iconName": "times",
+                  "prefix": "fas",
+                }
+              }
+              onClick={[Function]}
+            >
+              <FontAwesomeIcon
+                aria-label="close modal"
+                border={false}
+                className="sc-AxhCb eTlDTE"
+                fixedWidth={false}
+                flip={null}
+                icon={
+                  Object {
+                    "icon": Array [
+                      352,
+                      512,
+                      Array [],
+                      "f00d",
+                      "M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z",
+                    ],
+                    "iconName": "times",
+                    "prefix": "fas",
+                  }
+                }
+                inverse={false}
+                listItem={false}
+                mask={null}
+                onClick={[Function]}
+                pull={null}
+                pulse={false}
+                rotation={null}
+                size={null}
+                spin={false}
+                swapOpacity={false}
+                symbol={false}
+                title=""
+                transform={null}
+              >
+                <svg
+                  aria-hidden="true"
+                  aria-label="close modal"
+                  className="svg-inline--fa fa-times fa-w-11 sc-AxhCb eTlDTE"
+                  data-icon="times"
+                  data-prefix="fas"
+                  focusable="false"
+                  onClick={[Function]}
+                  role="img"
+                  style={Object {}}
+                  viewBox="0 0 352 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+                    fill="currentColor"
+                    style={Object {}}
+                  />
+                </svg>
+              </FontAwesomeIcon>
+            </Styled(FontAwesomeIcon)>
+            <styled.h3
+              id="modal-title"
+            >
+              <h3
+                className="sc-AxhUy hSmtMl"
+                id="modal-title"
+              >
+                 
+                spiderman
+              </h3>
+            </styled.h3>
+            <styled.div>
+              <div
+                className="sc-AxiKw bXxfRn"
+              >
+                <ComicList
+                  comics={Array []}
+                >
+                  <styled.ul>
+                    <ul
+                      className="sc-fzplWN BkLwV"
+                    />
+                  </styled.ul>
+                </ComicList>
+              </div>
+            </styled.div>
+          </aside>
+        </styled.aside>
+      </div>
+    </styled.div>
+  </Modal>
+</CharacterModal>
+`;

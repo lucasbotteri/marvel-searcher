@@ -1,3 +1,354 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Home Should match snapshot 1`] = `ReactWrapper {}`;
+exports[`Home Should match snapshot 1`] = `
+<MemoryRouter
+  initialEntries={
+    Array [
+      "/",
+    ]
+  }
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "key": "kkkz79",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "key": "kkkz79",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Home
+      characters={
+        Array [
+          Object {
+            "id": 1011377,
+            "name": "Spider-Man (Takuya Yamashiro)",
+            "thumbnail": "http://i.annihil.us/u/prod/marvel/i/mg/f/50/4be86ad8ada17/portrait_fantastic.jpg",
+          },
+          Object {
+            "id": 1011010,
+            "name": "Spider-Man (Ultimate)",
+            "thumbnail": "http://i.annihil.us/u/prod/marvel/i/mg/3/50/531771b4e8c60/portrait_fantastic.jpg",
+          },
+        ]
+      }
+    >
+      <styled.main>
+        <main
+          className="sc-fzoiQi dJeHQt"
+        >
+          <CharacterList
+            characters={
+              Array [
+                Object {
+                  "id": 1011377,
+                  "name": "Spider-Man (Takuya Yamashiro)",
+                  "thumbnail": "http://i.annihil.us/u/prod/marvel/i/mg/f/50/4be86ad8ada17/portrait_fantastic.jpg",
+                },
+                Object {
+                  "id": 1011010,
+                  "name": "Spider-Man (Ultimate)",
+                  "thumbnail": "http://i.annihil.us/u/prod/marvel/i/mg/3/50/531771b4e8c60/portrait_fantastic.jpg",
+                },
+              ]
+            }
+          >
+            <styled.ul>
+              <ul
+                className="sc-AxgMl bVLvwi"
+              >
+                <styled.li
+                  key="1011377"
+                >
+                  <li
+                    className="sc-AxheI kdRVYU"
+                  >
+                    <CharacterCard
+                      character={
+                        Object {
+                          "id": 1011377,
+                          "name": "Spider-Man (Takuya Yamashiro)",
+                          "thumbnail": "http://i.annihil.us/u/prod/marvel/i/mg/f/50/4be86ad8ada17/portrait_fantastic.jpg",
+                        }
+                      }
+                      isFaved={null}
+                      onClick={[Function]}
+                      onFaved={[Function]}
+                      onUnfaved={[Function]}
+                    >
+                      <styled.section
+                        alt="Spider-Man (Takuya Yamashiro)"
+                        onClick={[Function]}
+                      >
+                        <section
+                          alt="Spider-Man (Takuya Yamashiro)"
+                          className="sc-AxirZ jvhNjr"
+                          onClick={[Function]}
+                        >
+                          <styled.img
+                            src="http://i.annihil.us/u/prod/marvel/i/mg/f/50/4be86ad8ada17/portrait_fantastic.jpg"
+                          >
+                            <img
+                              className="sc-AxiKw hrBfdu"
+                              src="http://i.annihil.us/u/prod/marvel/i/mg/f/50/4be86ad8ada17/portrait_fantastic.jpg"
+                            />
+                          </styled.img>
+                          <Styled(Star)
+                            isSolid={null}
+                            onClick={[Function]}
+                          >
+                            <Star
+                              className="sc-AxhUy iYWvJI"
+                              isSolid={null}
+                              onClick={[Function]}
+                            >
+                              <Styled(FontAwesomeIcon)
+                                className="sc-AxhUy iYWvJI"
+                                icon={
+                                  Object {
+                                    "icon": Array [
+                                      576,
+                                      512,
+                                      Array [],
+                                      "f005",
+                                      "M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z",
+                                    ],
+                                    "iconName": "star",
+                                    "prefix": "far",
+                                  }
+                                }
+                                onClick={[Function]}
+                              >
+                                <FontAwesomeIcon
+                                  border={false}
+                                  className="sc-AxjAm jumYnU sc-AxhUy iYWvJI"
+                                  fixedWidth={false}
+                                  flip={null}
+                                  icon={
+                                    Object {
+                                      "icon": Array [
+                                        576,
+                                        512,
+                                        Array [],
+                                        "f005",
+                                        "M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z",
+                                      ],
+                                      "iconName": "star",
+                                      "prefix": "far",
+                                    }
+                                  }
+                                  inverse={false}
+                                  listItem={false}
+                                  mask={null}
+                                  onClick={[Function]}
+                                  pull={null}
+                                  pulse={false}
+                                  rotation={null}
+                                  size={null}
+                                  spin={false}
+                                  swapOpacity={false}
+                                  symbol={false}
+                                  title=""
+                                  transform={null}
+                                >
+                                  <svg
+                                    aria-hidden="true"
+                                    className="svg-inline--fa fa-star fa-w-18 sc-AxjAm jumYnU sc-AxhUy iYWvJI"
+                                    data-icon="star"
+                                    data-prefix="far"
+                                    focusable="false"
+                                    onClick={[Function]}
+                                    role="img"
+                                    style={Object {}}
+                                    viewBox="0 0 576 512"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z"
+                                      fill="currentColor"
+                                      style={Object {}}
+                                    />
+                                  </svg>
+                                </FontAwesomeIcon>
+                              </Styled(FontAwesomeIcon)>
+                            </Star>
+                          </Styled(Star)>
+                          <styled.h2>
+                            <h2
+                              className="sc-AxhCb bgIQZc"
+                            >
+                               
+                              Spider-Man (Takuya Yamashiro)
+                               
+                            </h2>
+                          </styled.h2>
+                        </section>
+                      </styled.section>
+                    </CharacterCard>
+                  </li>
+                </styled.li>
+                <styled.li
+                  key="1011010"
+                >
+                  <li
+                    className="sc-AxheI kdRVYU"
+                  >
+                    <CharacterCard
+                      character={
+                        Object {
+                          "id": 1011010,
+                          "name": "Spider-Man (Ultimate)",
+                          "thumbnail": "http://i.annihil.us/u/prod/marvel/i/mg/3/50/531771b4e8c60/portrait_fantastic.jpg",
+                        }
+                      }
+                      isFaved={null}
+                      onClick={[Function]}
+                      onFaved={[Function]}
+                      onUnfaved={[Function]}
+                    >
+                      <styled.section
+                        alt="Spider-Man (Ultimate)"
+                        onClick={[Function]}
+                      >
+                        <section
+                          alt="Spider-Man (Ultimate)"
+                          className="sc-AxirZ jvhNjr"
+                          onClick={[Function]}
+                        >
+                          <styled.img
+                            src="http://i.annihil.us/u/prod/marvel/i/mg/3/50/531771b4e8c60/portrait_fantastic.jpg"
+                          >
+                            <img
+                              className="sc-AxiKw hrBfdu"
+                              src="http://i.annihil.us/u/prod/marvel/i/mg/3/50/531771b4e8c60/portrait_fantastic.jpg"
+                            />
+                          </styled.img>
+                          <Styled(Star)
+                            isSolid={null}
+                            onClick={[Function]}
+                          >
+                            <Star
+                              className="sc-AxhUy iYWvJI"
+                              isSolid={null}
+                              onClick={[Function]}
+                            >
+                              <Styled(FontAwesomeIcon)
+                                className="sc-AxhUy iYWvJI"
+                                icon={
+                                  Object {
+                                    "icon": Array [
+                                      576,
+                                      512,
+                                      Array [],
+                                      "f005",
+                                      "M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z",
+                                    ],
+                                    "iconName": "star",
+                                    "prefix": "far",
+                                  }
+                                }
+                                onClick={[Function]}
+                              >
+                                <FontAwesomeIcon
+                                  border={false}
+                                  className="sc-AxjAm jumYnU sc-AxhUy iYWvJI"
+                                  fixedWidth={false}
+                                  flip={null}
+                                  icon={
+                                    Object {
+                                      "icon": Array [
+                                        576,
+                                        512,
+                                        Array [],
+                                        "f005",
+                                        "M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z",
+                                      ],
+                                      "iconName": "star",
+                                      "prefix": "far",
+                                    }
+                                  }
+                                  inverse={false}
+                                  listItem={false}
+                                  mask={null}
+                                  onClick={[Function]}
+                                  pull={null}
+                                  pulse={false}
+                                  rotation={null}
+                                  size={null}
+                                  spin={false}
+                                  swapOpacity={false}
+                                  symbol={false}
+                                  title=""
+                                  transform={null}
+                                >
+                                  <svg
+                                    aria-hidden="true"
+                                    className="svg-inline--fa fa-star fa-w-18 sc-AxjAm jumYnU sc-AxhUy iYWvJI"
+                                    data-icon="star"
+                                    data-prefix="far"
+                                    focusable="false"
+                                    onClick={[Function]}
+                                    role="img"
+                                    style={Object {}}
+                                    viewBox="0 0 576 512"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z"
+                                      fill="currentColor"
+                                      style={Object {}}
+                                    />
+                                  </svg>
+                                </FontAwesomeIcon>
+                              </Styled(FontAwesomeIcon)>
+                            </Star>
+                          </Styled(Star)>
+                          <styled.h2>
+                            <h2
+                              className="sc-AxhCb bgIQZc"
+                            >
+                               
+                              Spider-Man (Ultimate)
+                               
+                            </h2>
+                          </styled.h2>
+                        </section>
+                      </styled.section>
+                    </CharacterCard>
+                  </li>
+                </styled.li>
+              </ul>
+            </styled.ul>
+          </CharacterList>
+          <CharacterModal />
+        </main>
+      </styled.main>
+    </Home>
+  </Router>
+</MemoryRouter>
+`;

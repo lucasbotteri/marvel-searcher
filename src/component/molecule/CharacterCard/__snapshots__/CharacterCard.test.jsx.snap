@@ -1,3 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CharacterCard Should match snapshot 1`] = `ShallowWrapper {}`;
+exports[`CharacterCard Should match snapshot 1`] = `
+<styled.section
+  alt="Deathstrike (Ultimate)"
+  onClick={[Function]}
+>
+  <styled.img
+    src="someurl.com"
+  />
+  <Styled(Star)
+    isSolid={true}
+    onClick={[Function]}
+  />
+  <styled.h2>
+     
+    Deathstrike (Ultimate)
+     
+  </styled.h2>
+</styled.section>
+`;

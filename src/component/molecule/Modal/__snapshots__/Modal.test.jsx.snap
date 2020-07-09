@@ -1,3 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ComicDetail Should match snapshot 1`] = `ShallowWrapper {}`;
+exports[`ComicDetail Should match snapshot 1`] = `
+<styled.div>
+  <styled.aside
+    aria-labelledby="modal-title"
+    role="dialog"
+  >
+    <Styled(FontAwesomeIcon)
+      aria-label="close modal"
+      icon={
+        Object {
+          "icon": Array [
+            352,
+            512,
+            Array [],
+            "f00d",
+            "M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z",
+          ],
+          "iconName": "times",
+          "prefix": "fas",
+        }
+      }
+      onClick={[Function]}
+    />
+    <styled.h3
+      id="modal-title"
+    >
+       
+      title
+    </styled.h3>
+    <styled.div>
+      <div>
+        Test
+      </div>
+    </styled.div>
+  </styled.aside>
+</styled.div>
+`;
