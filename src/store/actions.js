@@ -13,7 +13,7 @@ import {
   HIDE_FAVS,
 } from "./constants";
 import {
-  getCharacterByName,
+  getCharactersByName,
   getRandomCharacter,
   getCharacterComics,
   getComic,
@@ -73,9 +73,9 @@ export const removeFav = (id) => ({
   payload: { id },
 });
 
-export const searchCharacter = async (dispatch, characterName) => {
+export const searchCharacters = async (dispatch, characterNames) => {
   dispatch(setLoadingCharacters());
-  const characters = await getCharacterByName(characterName);
+  const characters = await getCharactersByName(characterNames);
   dispatch(setCharacters(characters));
 };
 

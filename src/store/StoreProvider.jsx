@@ -21,8 +21,12 @@ const StoreProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INITAL_STATE);
   const value = {
     ...state,
+    searchCharacters: useCallback(
+      (charactersNames) => actions.searchCharacters(dispatch, charactersNames),
+      []
+    ),
     searchCharacter: useCallback(
-      (characterName) => actions.searchCharacter(dispatch, characterName),
+      (characterName) => actions.searchCharacters(dispatch, [characterName]),
       []
     ),
     searchRandomCharacter: useCallback(

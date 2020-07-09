@@ -21,7 +21,7 @@ const characters = [
 
 const contextStore = {
   searchRandomCharacter: () => {},
-  searchCharacter: () => {},
+  searchCharacters: () => {},
   comic: null,
   characters: null,
   loadingContent: false,
@@ -66,14 +66,14 @@ describe("Home", () => {
   });
 
   it("Should call searchCharacter", () => {
-    const searchCharacter = jest.fn();
+    const searchCharacters = jest.fn();
     mountHome(
       {
-        searchCharacter,
+        searchCharacters,
       },
       "/?character=spiderman"
     );
-    expect(searchCharacter).toHaveBeenCalledWith("spiderman");
+    expect(searchCharacters).toHaveBeenCalledWith(["spiderman"]);
   });
 
   it("Should match snapshot", () => {
