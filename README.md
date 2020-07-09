@@ -4,11 +4,11 @@ https://marvel-searcher-pi.vercel.app/
 
 ## Setting up project for local
 
-1 - Create `.env` file with correct enviroments variables (just copy and paste the ones in `example.env`)
-2 -`yarn install`
-3- `yarn start`
-4- Go to [http://localhost:3000](http://localhost:3000)
-5- Enjoy the app!
+1. Create `.env` file with correct enviroments variables (just copy and paste the ones in `example.env`)
+2. `yarn install`
+3. `yarn start`
+4. Go to [http://localhost:3000](http://localhost:3000)
+5. Enjoy the app!
 
 ### Linter and Formatter
 
