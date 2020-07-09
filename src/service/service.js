@@ -19,14 +19,20 @@ const parseCharactersResponse = (response) => {
   }));
 };
 
-export const getCharacterByName = async (name) => {
-  const { data } = await axiosClient.get("/characters", {
-    params: {
-      nameStartsWith: name,
-    },
-  });
+export const getCharactersByName = async (names = []) => {
+  const charactersRequests = names.map((n) =>
+    axiosClient.get("/characters", {
+      params: {
+        nameStartsWith: n,
+      },
+    })
+  );
+  const resolvedRequests = await Promise.all(charactersRequests);
 
-  const parsedCharacters = parseCharactersResponse(data.data);
+  const parsedCharacters = resolvedRequests
+    .map((r) => r.data && parseCharactersResponse(r.data.data))
+    .flat();
+
   if (parsedCharacters.length === 0) {
     return null;
   }

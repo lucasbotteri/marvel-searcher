@@ -21,7 +21,7 @@ const HomeWrapper = styled.main`
 const Home = () => {
   const {
     searchRandomCharacter,
-    searchCharacter,
+    searchCharacters,
     comic,
     characters,
     loadingContent,
@@ -37,11 +37,11 @@ const Home = () => {
 
   useEffect(() => {
     if (queryParamCharacter) {
-      searchCharacter(queryParamCharacter);
+      searchCharacters(queryParamCharacter.split(","));
     } else {
       searchRandomCharacter();
     }
-  }, [searchRandomCharacter, searchCharacter, queryParamCharacter]);
+  }, [searchRandomCharacter, searchCharacters, queryParamCharacter]);
 
   return (
     <HomeWrapper>
