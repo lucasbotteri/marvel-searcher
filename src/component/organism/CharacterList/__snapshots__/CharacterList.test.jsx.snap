@@ -18,7 +18,7 @@ exports[`CharacterList Should match snapshot 1`] = `
         "entries": Array [
           Object {
             "hash": "",
-            "key": "q1h1wt",
+            "key": "biossg",
             "pathname": "/",
             "search": "",
             "state": undefined,
@@ -32,7 +32,7 @@ exports[`CharacterList Should match snapshot 1`] = `
         "listen": [Function],
         "location": Object {
           "hash": "",
-          "key": "q1h1wt",
+          "key": "biossg",
           "pathname": "/",
           "search": "",
           "state": undefined,
