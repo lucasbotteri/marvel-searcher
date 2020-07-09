@@ -8,9 +8,26 @@ export const CharacterCardWrapper = styled.section`
   height: 380px;
   position: relative;
   width: 256px;
+
+  &:before {
+    content: "";
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(255, 255, 255, 0) 33%
+    );
+    border-radius: ${(props) => props.theme.radius};
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
 `;
 
 export const ImageOverlay = styled.img`
+  background: grey;
   border-radius: ${(props) => props.theme.radius};
   height: 100%;
   position: relative;
@@ -23,6 +40,7 @@ export const Name = styled.h2`
   font-size: ${(props) => props.theme.h2Size};
   left: 16px;
   position: absolute;
+  z-index: 1;
 `;
 
 export const TopRightStar = styled(Star)`

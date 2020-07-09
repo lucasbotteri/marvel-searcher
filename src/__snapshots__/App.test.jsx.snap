@@ -18,7 +18,7 @@ exports[`App Should match snapshot 1`] = `
         "entries": Array [
           Object {
             "hash": "",
-            "key": "mkmbvd",
+            "key": "ey1aan",
             "pathname": "/",
             "search": "",
             "state": undefined,
@@ -32,7 +32,7 @@ exports[`App Should match snapshot 1`] = `
         "listen": [Function],
         "location": Object {
           "hash": "",
-          "key": "mkmbvd",
+          "key": "ey1aan",
           "pathname": "/",
           "search": "",
           "state": undefined,
@@ -317,14 +317,14 @@ exports[`App Should match snapshot 1`] = `
                             >
                               <section
                                 alt="Spider-dok"
-                                className="sc-AxirZ jvhNjr"
+                                className="sc-AxirZ bCKUBB"
                                 onClick={[Function]}
                               >
                                 <styled.img
                                   src="https://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available/portrait_fantastic.jpg"
                                 >
                                   <img
-                                    className="sc-AxiKw hrBfdu"
+                                    className="sc-AxiKw jTQMHy"
                                     src="https://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available/portrait_fantastic.jpg"
                                   />
                                 </styled.img>
@@ -410,7 +410,7 @@ exports[`App Should match snapshot 1`] = `
                                 </Styled(Star)>
                                 <styled.h2>
                                   <h2
-                                    className="sc-AxhCb bgIQZc"
+                                    className="sc-AxhCb lbMrWD"
                                   >
                                      
                                     Spider-dok
@@ -447,14 +447,14 @@ exports[`App Should match snapshot 1`] = `
                             >
                               <section
                                 alt="Spider-Girl (Anya Corazon)"
-                                className="sc-AxirZ jvhNjr"
+                                className="sc-AxirZ bCKUBB"
                                 onClick={[Function]}
                               >
                                 <styled.img
                                   src="https://i.annihil.us/u/prod/marvel/i/mg/a/10/528d369de3e4f/portrait_fantastic.jpg"
                                 >
                                   <img
-                                    className="sc-AxiKw hrBfdu"
+                                    className="sc-AxiKw jTQMHy"
                                     src="https://i.annihil.us/u/prod/marvel/i/mg/a/10/528d369de3e4f/portrait_fantastic.jpg"
                                   />
                                 </styled.img>
@@ -540,7 +540,7 @@ exports[`App Should match snapshot 1`] = `
                                 </Styled(Star)>
                                 <styled.h2>
                                   <h2
-                                    className="sc-AxhCb bgIQZc"
+                                    className="sc-AxhCb lbMrWD"
                                   >
                                      
                                     Spider-Girl (Anya Corazon)
@@ -577,14 +577,14 @@ exports[`App Should match snapshot 1`] = `
                             >
                               <section
                                 alt="Spider-Man"
-                                className="sc-AxirZ jvhNjr"
+                                className="sc-AxirZ bCKUBB"
                                 onClick={[Function]}
                               >
                                 <styled.img
                                   src="https://i.annihil.us/u/prod/marvel/i/mg/3/50/526548a343e4b/portrait_fantastic.jpg"
                                 >
                                   <img
-                                    className="sc-AxiKw hrBfdu"
+                                    className="sc-AxiKw jTQMHy"
                                     src="https://i.annihil.us/u/prod/marvel/i/mg/3/50/526548a343e4b/portrait_fantastic.jpg"
                                   />
                                 </styled.img>
@@ -670,7 +670,7 @@ exports[`App Should match snapshot 1`] = `
                                 </Styled(Star)>
                                 <styled.h2>
                                   <h2
-                                    className="sc-AxhCb bgIQZc"
+                                    className="sc-AxhCb lbMrWD"
                                   >
                                      
                                     Spider-Man
@@ -707,14 +707,14 @@ exports[`App Should match snapshot 1`] = `
                             >
                               <section
                                 alt="Spider-Man (1602)"
-                                className="sc-AxirZ jvhNjr"
+                                className="sc-AxirZ bCKUBB"
                                 onClick={[Function]}
                               >
                                 <styled.img
                                   src="https://i.annihil.us/u/prod/marvel/i/mg/e/03/5317713c9e746/portrait_fantastic.jpg"
                                 >
                                   <img
-                                    className="sc-AxiKw hrBfdu"
+                                    className="sc-AxiKw jTQMHy"
                                     src="https://i.annihil.us/u/prod/marvel/i/mg/e/03/5317713c9e746/portrait_fantastic.jpg"
                                   />
                                 </styled.img>
@@ -800,7 +800,7 @@ exports[`App Should match snapshot 1`] = `
                                 </Styled(Star)>
                                 <styled.h2>
                                   <h2
-                                    className="sc-AxhCb bgIQZc"
+                                    className="sc-AxhCb lbMrWD"
                                   >
                                      
                                     Spider-Man (1602)

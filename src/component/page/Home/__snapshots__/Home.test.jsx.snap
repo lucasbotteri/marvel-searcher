@@ -18,7 +18,7 @@ exports[`Home Should match snapshot 1`] = `
         "entries": Array [
           Object {
             "hash": "",
-            "key": "eriz8g",
+            "key": "fiuriv",
             "pathname": "/",
             "search": "",
             "state": undefined,
@@ -32,7 +32,7 @@ exports[`Home Should match snapshot 1`] = `
         "listen": [Function],
         "location": Object {
           "hash": "",
-          "key": "eriz8g",
+          "key": "fiuriv",
           "pathname": "/",
           "search": "",
           "state": undefined,
@@ -107,14 +107,14 @@ exports[`Home Should match snapshot 1`] = `
                       >
                         <section
                           alt="Spider-Man (Takuya Yamashiro)"
-                          className="sc-AxirZ jvhNjr"
+                          className="sc-AxirZ bCKUBB"
                           onClick={[Function]}
                         >
                           <styled.img
                             src="http://i.annihil.us/u/prod/marvel/i/mg/f/50/4be86ad8ada17/portrait_fantastic.jpg"
                           >
                             <img
-                              className="sc-AxiKw hrBfdu"
+                              className="sc-AxiKw jTQMHy"
                               src="http://i.annihil.us/u/prod/marvel/i/mg/f/50/4be86ad8ada17/portrait_fantastic.jpg"
                             />
                           </styled.img>
@@ -200,7 +200,7 @@ exports[`Home Should match snapshot 1`] = `
                           </Styled(Star)>
                           <styled.h2>
                             <h2
-                              className="sc-AxhCb bgIQZc"
+                              className="sc-AxhCb lbMrWD"
                             >
                                
                               Spider-Man (Takuya Yamashiro)
@@ -237,14 +237,14 @@ exports[`Home Should match snapshot 1`] = `
                       >
                         <section
                           alt="Spider-Man (Ultimate)"
-                          className="sc-AxirZ jvhNjr"
+                          className="sc-AxirZ bCKUBB"
                           onClick={[Function]}
                         >
                           <styled.img
                             src="http://i.annihil.us/u/prod/marvel/i/mg/3/50/531771b4e8c60/portrait_fantastic.jpg"
                           >
                             <img
-                              className="sc-AxiKw hrBfdu"
+                              className="sc-AxiKw jTQMHy"
                               src="http://i.annihil.us/u/prod/marvel/i/mg/3/50/531771b4e8c60/portrait_fantastic.jpg"
                             />
                           </styled.img>
@@ -330,7 +330,7 @@ exports[`Home Should match snapshot 1`] = `
                           </Styled(Star)>
                           <styled.h2>
                             <h2
-                              className="sc-AxhCb bgIQZc"
+                              className="sc-AxhCb lbMrWD"
                             >
                                
                               Spider-Man (Ultimate)
