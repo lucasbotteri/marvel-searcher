@@ -17,7 +17,6 @@ export const ImageOverlay = styled.img`
   width: 100%;
 `;
 
-// TODO color should be themed, fontSize also
 export const Name = styled.h2`
   bottom: 8px;
   color: ${(props) => props.theme.primaryColor};

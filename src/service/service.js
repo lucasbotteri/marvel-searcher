@@ -1,7 +1,5 @@
 import axiosClient from "../axiosClient";
 
-const TOTAL_CHARACTERS = 1493;
-
 const ON_SALE_DATE_TYPE = "onsaleDate";
 const WRITER_ROLE = "writer";
 const PENCILLER_ROLE = "inker";
@@ -41,9 +39,16 @@ export const getCharactersByName = async (names = []) => {
 };
 
 export const getRandomCharacter = async () => {
-  // TODO get total characters doing a request for all characters setting count to 0 to minimum payload
+  const { data: totalData } = await axiosClient.get("/characters", {
+    params: {
+      offset: 0,
+      limit: 1,
+    },
+  });
+  const totalCharacters = totalData.data.total;
+
   const randomCharacterOffset = Math.floor(
-    Math.random() * (TOTAL_CHARACTERS - 1)
+    Math.random() * (totalCharacters - 1)
   );
 
   const { data } = await axiosClient.get("/characters", {

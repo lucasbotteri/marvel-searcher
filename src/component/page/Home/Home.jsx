@@ -34,10 +34,9 @@ const Home = () => {
   const charactersToShow = isShowingFavs ? favs : characters;
 
   const noResults = !loadingContent && !charactersToShow && !comic;
-
   useEffect(() => {
     if (queryParamCharacter) {
-      searchCharacters(queryParamCharacter.split(","));
+      searchCharacters(queryParamCharacter.replace(/"/g, "").split(","));
     } else {
       searchRandomCharacter();
     }
