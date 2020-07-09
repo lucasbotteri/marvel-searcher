@@ -22,7 +22,7 @@ const contextStore = {
 
 const mountCharacterList = () => {
   return mount(
-    <MemoryRouter initialEntries={["/"]}>
+    <MemoryRouter initialEntries={["/"]} keyLength={0}>
       <StoreContext.Provider value={contextStore}>
         <CharacterList characters={characters} />
       </StoreContext.Provider>

@@ -31,7 +31,7 @@ const contextStore = {
 
 const mountHome = (overrideStore, overrideEntry) => {
   return mount(
-    <MemoryRouter initialEntries={[overrideEntry || "/"]}>
+    <MemoryRouter initialEntries={[overrideEntry || "/"]} keyLength={0}>
       <StoreContext.Provider value={{ ...contextStore, ...overrideStore }}>
         <Home characters={characters} />
       </StoreContext.Provider>

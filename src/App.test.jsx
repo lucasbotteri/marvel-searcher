@@ -72,7 +72,7 @@ const contextStore = {
 
 const mountApp = () => {
   return mount(
-    <MemoryRouter initialEntries={["/"]}>
+    <MemoryRouter initialEntries={["/"]} keyLength={0}>
       <StoreContext.Provider value={contextStore}>
         <App />
       </StoreContext.Provider>
