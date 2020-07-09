@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import ComicItem from "../../molecule/ComicItem";
+import ComicItem from "../ComicItem";
 
 export const ComicListWrapper = styled.ul`
   box-sizing: border-box;

@@ -1,8 +1,8 @@
 import React from "react";
 import { mount } from "enzyme";
+import { MemoryRouter } from "react-router";
 import CharacterList from "./CharacterList";
 import { StoreContext } from "../../../store";
-import { MemoryRouter } from "react-router";
 
 const characters = [
   {
