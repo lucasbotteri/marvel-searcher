@@ -18,7 +18,7 @@ exports[`CharacterList Should match snapshot 1`] = `
         "entries": Array [
           Object {
             "hash": "",
-            "key": "311rws",
+            "key": "q1h1wt",
             "pathname": "/",
             "search": "",
             "state": undefined,
@@ -32,7 +32,7 @@ exports[`CharacterList Should match snapshot 1`] = `
         "listen": [Function],
         "location": Object {
           "hash": "",
-          "key": "311rws",
+          "key": "q1h1wt",
           "pathname": "/",
           "search": "",
           "state": undefined,
@@ -82,14 +82,14 @@ exports[`CharacterList Should match snapshot 1`] = `
                 >
                   <section
                     alt="Deathstrike (Ultimate)"
-                    className="sc-AxirZ jvhNjr"
+                    className="sc-AxirZ bCKUBB"
                     onClick={[Function]}
                   >
                     <styled.img
                       src="someurl.com"
                     >
                       <img
-                        className="sc-AxiKw hrBfdu"
+                        className="sc-AxiKw jTQMHy"
                         src="someurl.com"
                       />
                     </styled.img>
@@ -175,7 +175,7 @@ exports[`CharacterList Should match snapshot 1`] = `
                     </Styled(Star)>
                     <styled.h2>
                       <h2
-                        className="sc-AxhCb bgIQZc"
+                        className="sc-AxhCb lbMrWD"
                       >
                          
                         Deathstrike (Ultimate)
