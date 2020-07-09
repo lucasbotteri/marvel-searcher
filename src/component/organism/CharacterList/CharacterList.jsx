@@ -38,7 +38,10 @@ const CharacterList = ({ characters }) => {
             character={c}
             onClick={() => {
               selectCharacter(c.id, c.name);
-              searchCharacterComics(c.id, comicFilter.replace(/"/g, ""));
+              searchCharacterComics(
+                c.id,
+                comicFilter && comicFilter.replace(/"/g, "")
+              );
             }}
             isFaved={favs && favs.some((f) => f.id === c.id)}
             onFaved={() => saveFav(c)}
