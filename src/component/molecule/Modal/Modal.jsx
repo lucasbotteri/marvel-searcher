@@ -4,7 +4,7 @@ import { faTimes as CloseSvg } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PropTypes from "prop-types";
 
-const ModalBackground = styled.div`
+export const ModalBackground = styled.div`
   background-color: ${(props) => props.theme.opaqueColor};
   height: 100%;
   left: 0;
@@ -14,7 +14,7 @@ const ModalBackground = styled.div`
   z-index: 1;
 `;
 
-const ModalWrapper = styled.aside`
+export const ModalWrapper = styled.aside`
   background-color: ${(props) => props.theme.primaryColor};
   border-radius: ${(props) => props.theme.radius};
   border: 1px solid ${(props) => props.theme.secondaryColor};
@@ -34,13 +34,13 @@ const ModalWrapper = styled.aside`
   }
 `;
 
-const ModalContent = styled.div`
+export const ModalContent = styled.div`
   align-self: center;
   padding: 10px;
   overflow: auto;
 `;
 
-const CloseIcon = styled(FontAwesomeIcon)`
+export const CloseIcon = styled(FontAwesomeIcon)`
   align-self: flex-end;
   color: ${(props) => props.theme.secondaryColor};
   cursor: pointer;
@@ -49,7 +49,7 @@ const CloseIcon = styled(FontAwesomeIcon)`
   }
 `;
 
-const ModalTitle = styled.h3`
+export const ModalTitle = styled.h3`
   align-self: flex-start;
   color: ${(props) => props.theme.primaryFontColor};
   font-family: ${(props) => props.theme.modalFont};
@@ -69,7 +69,7 @@ const Modal = ({ children, title, onClose }) => {
 };
 
 Modal.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.node.isRequired,
   title: PropTypes.string.isRequired,
   onClose: PropTypes.func.isRequired,
 };

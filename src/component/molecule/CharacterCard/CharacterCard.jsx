@@ -3,14 +3,14 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import Star from "../Star";
 
-const CharacterCardWrapper = styled.section`
+export const CharacterCardWrapper = styled.section`
   cursor: pointer;
   height: 380px;
   position: relative;
   width: 256px;
 `;
 
-const ImageOverlay = styled.img`
+export const ImageOverlay = styled.img`
   border-radius: ${(props) => props.theme.radius};
   height: 100%;
   position: relative;
@@ -18,7 +18,7 @@ const ImageOverlay = styled.img`
 `;
 
 // TODO color should be themed, fontSize also
-const Name = styled.h2`
+export const Name = styled.h2`
   bottom: 8px;
   color: ${(props) => props.theme.primaryColor};
   font-size: ${(props) => props.theme.h2Size};
@@ -26,11 +26,12 @@ const Name = styled.h2`
   position: absolute;
 `;
 
-const TopRightStar = styled(Star)`
+export const TopRightStar = styled(Star)`
   position: absolute;
   right: 16px;
   top: 8px;
 `;
+
 const CharacterCard = ({ character, onClick, isFaved, onFaved, onUnfaved }) => {
   const { name, thumbnail } = character;
   return (

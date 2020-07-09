@@ -4,7 +4,7 @@ import { faSearch as SearchSvg } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 
-const InputBox = styled.input`
+export const InputBox = styled.input`
   -webkit-appearance: none;
   border: 0;
   margin-left: 10px;
@@ -12,12 +12,12 @@ const InputBox = styled.input`
   width: 100%;
 `;
 
-const SearchIcon = styled(FontAwesomeIcon)`
+export const SearchIcon = styled(FontAwesomeIcon)`
   font-size: 20px;
   color: ${(props) => props.theme.secondaryColor};
 `;
 
-const SearchForm = styled.form`
+export const SearchForm = styled.form`
   display: flex;
   color: ${(props) => props.theme.secondaryColor};
   font-size: 16px;

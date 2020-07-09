@@ -5,7 +5,7 @@ import { faStar as SolidStar } from "@fortawesome/free-solid-svg-icons";
 import { faStar as RegularStar } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const StarIcon = styled(FontAwesomeIcon)`
+export const StarIcon = styled(FontAwesomeIcon)`
   color: ${(props) => props.theme.primaryColor};
   cursor: pointer;
 `;
@@ -17,12 +17,13 @@ const Star = ({ onClick, isSolid, className }) => {
 
 Star.propTypes = {
   className: PropTypes.string,
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
   isSolid: PropTypes.bool,
 };
 Star.defaultProps = {
   className: "",
   isSolid: false,
+  onClick: () => {},
 };
 
 export default Star;
