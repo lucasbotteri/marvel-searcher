@@ -4,6 +4,12 @@ https://marvel-searcher-pi.vercel.app/
 
 ## Setting up project for local
 
+1 - Create `.env` file with correct enviroments variables (just copy and paste the ones in `example.env`)
+2 -`yarn install`
+3- `yarn start`
+4- Go to [http://localhost:3000](http://localhost:3000)
+5- Enjoy the app!
+
 ### Linter and Formatter
 
 We recommend to use VS extension to help you coding because they will run before pushing your code using Huksy and wont let you push if some of the scripts fails
