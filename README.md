@@ -2,7 +2,17 @@
 
 https://marvel-searcher-pi.vercel.app/
 
-## Available Scripts
+## Setting up project for local
+
+### Linter and Formatter
+
+We recommend to use VS extension to help you coding because they will run before pushing your code using Huksy and wont let you push if some of the scripts fails
+
+### Enviroment variables
+
+Check `example.env` file to know what enviroment variables do you need and check [create-react-app](https://create-react-app.dev/docs/adding-custom-environment-variables/#what-other-env-files-can-be-used) to know which env file name do you need to create.
+
+## Scripts
 
 In the project directory, you can run:
 
@@ -28,11 +38,3 @@ The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### Linter and Formatter
-
-We recommend to use VS extension to help you coding because they will run before pushing your code using Huksy and wont let you push if some of the scripts fails
-
-### Enviroment variables
-
-Check example.env file to know what enviroment variables do you need and check [create-react-app] to know which env file name do you need to create.
