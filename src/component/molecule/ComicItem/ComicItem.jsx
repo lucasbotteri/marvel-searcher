@@ -52,14 +52,14 @@ const ComicDescription = styled.p`
   grid-area: description;
 `;
 
-const ComicItem = ({ comic, onFaved }) => {
+const ComicItem = ({ comic }) => {
   const { title, description, thumbnail, isFaved } = comic;
   return (
     <ComicItemWrapper>
       <ComicImage src={thumbnail} alt={`${title} comic thumbnail`} />
       <ComicHead>
         <ComicTitle>{title}</ComicTitle>
-        <ComicStar isSolid={isFaved} role="button" onClick={onFaved} />
+        <ComicStar isSolid={isFaved} role="button" />
       </ComicHead>
       <ComicDescription>{description}</ComicDescription>
     </ComicItemWrapper>
@@ -74,7 +74,6 @@ ComicItem.propTypes = {
     thumbnail: PropTypes.string,
     isFaved: PropTypes.bool,
   }).isRequired,
-  onFaved: PropTypes.func.isRequired,
 };
 
 export default ComicItem;

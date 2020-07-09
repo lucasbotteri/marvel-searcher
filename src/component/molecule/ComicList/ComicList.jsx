@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import ComicItem from "../../molecule/ComicItem";
 
-const ComicListWrapper = styled.ul`
+export const ComicListWrapper = styled.ul`
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -11,7 +11,7 @@ const ComicListWrapper = styled.ul`
   padding: 0;
 `;
 
-const NonStyledLi = styled.li`
+export const NonStyledLi = styled.li`
   list-style: none;
 `;
 

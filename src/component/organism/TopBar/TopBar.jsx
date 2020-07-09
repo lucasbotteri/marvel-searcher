@@ -43,6 +43,7 @@ const TopBar = () => {
     isShowingFavs,
     hideFavs,
   } = useContext(StoreContext);
+
   const onSearch = (searchText) => {
     if (searchText) {
       const isAComicSearch = MARVEL_COMIC_URL_REGEX.test(searchText);

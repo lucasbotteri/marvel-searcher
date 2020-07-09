@@ -12,7 +12,8 @@ const parseCharactersResponse = (response) => {
   return results.map((c) => ({
     id: c.id,
     name: c.name,
-    thumbnail: c.thumbnail && `${c.thumbnail.path}/portrait_fantastic.jpg`,
+    thumbnail:
+      c.thumbnail && `https://${c.thumbnail.path}/portrait_fantastic.jpg`,
   }));
 };
 
@@ -64,7 +65,7 @@ export const getCharacterComics = async (characterId, comicFilter) => {
     id: c.id,
     title: c.title,
     description: c.description,
-    thumbnail: c.thumbnail && `${c.thumbnail.path}/standard_medium.jpg`,
+    thumbnail: c.thumbnail && `https://${c.thumbnail.path}/standard_medium.jpg`,
   }));
 };
 
@@ -96,7 +97,8 @@ export const getComic = async (comicId) => {
   const published = onsaleDate.date;
 
   const thumbnail =
-    comicData.thumbnail && `${comicData.thumbnail.path}/portrait_uncanny.jpg`;
+    comicData.thumbnail &&
+    `https://${comicData.thumbnail.path}/portrait_uncanny.jpg`;
 
   const creators = comicData.creators || {};
   const writer = getCreatorsOfRole(creators.items, WRITER_ROLE);
