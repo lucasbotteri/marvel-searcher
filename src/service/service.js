@@ -4,16 +4,18 @@ const TOTAL_CHARACTERS = 1493;
 
 const ON_SALE_DATE_TYPE = "onsaleDate";
 const WRITER_ROLE = "writer";
-const PENCILLER_ROLE = "penciller";
-const COVER_ROLE = "penciller (cover)";
+const PENCILLER_ROLE = "inker";
+const COVER_ROLE = "penciler (cover)";
+
+const parseImageUrl = (thumbnail, imageSize) =>
+  thumbnail && `${thumbnail.path.replace("http", "https")}/${imageSize}`;
 
 const parseCharactersResponse = (response) => {
   const results = response.results || [];
   return results.map((c) => ({
     id: c.id,
     name: c.name,
-    thumbnail:
-      c.thumbnail && `https://${c.thumbnail.path}/portrait_fantastic.jpg`,
+    thumbnail: parseImageUrl(c.thumbnail, "portrait_fantastic.jpg"),
   }));
 };
 
@@ -65,7 +67,7 @@ export const getCharacterComics = async (characterId, comicFilter) => {
     id: c.id,
     title: c.title,
     description: c.description,
-    thumbnail: c.thumbnail && `https://${c.thumbnail.path}/standard_medium.jpg`,
+    thumbnail: parseImageUrl(c.thumbnail, "standard_medium.jpg"),
   }));
 };
 
@@ -96,9 +98,7 @@ export const getComic = async (comicId) => {
     {};
   const published = onsaleDate.date;
 
-  const thumbnail =
-    comicData.thumbnail &&
-    `https://${comicData.thumbnail.path}/portrait_uncanny.jpg`;
+  const thumbnail = parseImageUrl(comicData.thumbnail, "portrait_uncanny.jpg");
 
   const creators = comicData.creators || {};
   const writer = getCreatorsOfRole(creators.items, WRITER_ROLE);
