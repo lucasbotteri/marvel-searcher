@@ -47,6 +47,7 @@ export const TopRightStar = styled(Star)`
   position: absolute;
   right: 16px;
   top: 8px;
+  z-index: 1;
 `;
 
 const CharacterCard = ({ character, onClick, isFaved, onFaved, onUnfaved }) => {

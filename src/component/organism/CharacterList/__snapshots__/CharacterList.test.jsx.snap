@@ -97,12 +97,12 @@ exports[`CharacterList Should match snapshot 1`] = `
                       onClick={[Function]}
                     >
                       <Star
-                        className="sc-AxhUy iYWvJI"
+                        className="sc-AxhUy hggZQL"
                         isSolid={null}
                         onClick={[Function]}
                       >
                         <Styled(FontAwesomeIcon)
-                          className="sc-AxhUy iYWvJI"
+                          className="sc-AxhUy hggZQL"
                           icon={
                             Object {
                               "icon": Array [
@@ -120,7 +120,7 @@ exports[`CharacterList Should match snapshot 1`] = `
                         >
                           <FontAwesomeIcon
                             border={false}
-                            className="sc-AxjAm jumYnU sc-AxhUy iYWvJI"
+                            className="sc-AxjAm jumYnU sc-AxhUy hggZQL"
                             fixedWidth={false}
                             flip={null}
                             icon={
@@ -152,7 +152,7 @@ exports[`CharacterList Should match snapshot 1`] = `
                           >
                             <svg
                               aria-hidden="true"
-                              className="svg-inline--fa fa-star fa-w-18 sc-AxjAm jumYnU sc-AxhUy iYWvJI"
+                              className="svg-inline--fa fa-star fa-w-18 sc-AxjAm jumYnU sc-AxhUy hggZQL"
                               data-icon="star"
                               data-prefix="far"
                               focusable="false"
